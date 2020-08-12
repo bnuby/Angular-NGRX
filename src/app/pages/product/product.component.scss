@@ -1,0 +1,19 @@
+.product-page {
+  height: calc(100% - 16px);
+  padding: 8px;
+
+  .tool-menu {
+    button {
+      margin: 5px;
+    }
+  }
+
+  .product-list {
+    display: flex;
+    flex-flow: row wrap;
+
+    app-product-card {
+      margin: 10px;
+    }
+  }
+}

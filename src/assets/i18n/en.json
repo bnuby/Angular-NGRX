@@ -1,0 +1,23 @@
+{
+  "app": {
+    "title": "Product System",
+    "welcome-login": "Welcome to Login Page"
+  },
+  "error page": "Error 404",
+  "language": "Language",
+
+  "create-product-form": "Create Product Form",
+  "update-product-form": "Update product Form",
+
+  "create": "Create",
+  "delete": "Delete",
+  "edit": "Edit",
+  "update": "Update",
+  "login": "Login",
+  "logout": "Log Out",
+  "product": {
+    "name": "Name",
+    "type": "Type",
+    "price": "Price"
+  }
+}

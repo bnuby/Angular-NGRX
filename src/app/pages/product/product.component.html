@@ -1,0 +1,16 @@
+<div class="product-page" #productPage>
+  <div class="tool-menu">
+    <button mat-raised-button color="primary" (click)="goToCreate()">{{ 'create' | translate }}</button>
+    <button mat-raised-button color="accent" (click)="goToEdit()"
+      [disabled]="!product">{{ 'edit' | translate }}</button>
+    <button mat-raised-button color="warn" (click)="delete()" [disabled]="!product">{{ 'delete' | translate }}</button>
+  </div>
+
+  <div class="product-list">
+    <app-product-card *ngFor="let p of products; let i=index" [product]="p" [clickable]="true" (clickFn)="onClick(i)"
+      [style]="{
+        backgroundColor: selectedIndex === i ? 'lightgray' : 'white'
+      }">
+    </app-product-card>
+  </div>
+</div>

@@ -1,0 +1,35 @@
+@import "../../../variables";
+
+.product-card {
+  border: 1px solid black;
+  border-radius: 5px;
+  box-shadow: 5px 5px 5px 5px gray;
+  padding: 10px;
+
+  .title {
+    font-size: 2em;
+    line-height: 1.2;
+  }
+
+  .detail {
+    display: flex;
+    justify-content: space-between;
+    line-height: 1;
+
+    * {
+      padding: 0 5px;
+    }
+
+    .type {
+      font-size: 1em;
+      color: gray;
+    }
+
+    .price {
+      display: flex;
+      align-items: center;
+      font-size: 1em;
+      color: rgb(36, 224, 45);
+    }
+  }
+}

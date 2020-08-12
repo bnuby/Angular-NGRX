@@ -1,0 +1,96 @@
+@import "../../../variables";
+
+:host,
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  min-height: 100vh;
+  min-width: 100vw;
+  background: rgba(50.2%, 50.2%, 50.2%, 0.8);
+  z-index: 50;
+
+  overflow: overlay;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.custom-modal {
+  border: 2 solid black;
+  background-color: whitesmoke;
+  border-radius: 5px;
+  z-index: 100;
+  box-shadow: 0px 0px 5px 5px #000000ae;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-width: calc(100% - 40px);
+  min-height: 120px;
+
+  @media screen and (min-width: 778px) {
+    &.xs {
+      min-width: 200px;
+    }
+    &.sm {
+      min-width: 300px;
+    }
+
+    &.md {
+      min-width: 450px;
+    }
+
+    &.lg {
+      min-width: 550px;
+    }
+
+    &.xl {
+      min-width: 700px;
+    }
+  }
+}
+
+.modal-title {
+  background-color: $primary-color;
+  color: $primary-text-color;
+  border-bottom: 1px solid $border-color;
+  font-size: 2em;
+  line-height: 1.2;
+  font-weight: 900;
+  padding: 8px;
+  word-break: break-all;
+
+  .success & {
+    color: $success-color;
+  }
+
+  .danger & {
+    color: $danger-color;
+  }
+
+  .warning & {
+    color: $warning-color;
+  }
+
+}
+
+.modal-body {
+  word-break: break-all;
+  padding: 5px 10px;
+  font-size: 1.4em;
+  line-height: 1;
+  min-height: 80px;
+  flex-grow: 1;
+}
+
+.modal-footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  border-top: 1px solid $border-color;
+  padding: 5px;
+
+  button {
+    margin: 0 5px;
+  }
+}

@@ -1,0 +1,162 @@
+@import "../../../variables.scss";
+
+.sidenav-container {
+  height: 100%;
+}
+
+.sidenav {
+  width: 100%;
+
+  @media screen and (min-width: 778px) {
+    width: 200px;
+  }
+
+  .toolbar-items {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .toolbar-sm-items {
+      display: flex;
+      flex-direction: column;
+
+      @media screen and (min-width: 778px) {
+        display: none;
+      }
+    }
+  }
+
+  .sidenav-content {
+    display: flex;
+    flex-direction: column;
+
+    max-height: calc(100vh - 58px);
+    height: calc(100vh - 58px);
+
+    @media screen and (min-width: 778px) {
+      max-height: calc(100vh - 67px);
+      height: calc(100vh - 67px);
+    }
+
+    .account-menu {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .user {
+        background-color: $secondary-color;
+        color: $primary-text-color;
+      }
+
+      button {
+        min-width: 130px;
+        margin: 5px 0;
+      }
+
+      @media screen and (min-width: 778px) {
+        display: none;
+      }
+    }
+  }
+}
+
+hr {
+  margin: 0;
+  padding: 0;
+}
+
+.mat-toolbar {
+  color: $primary-text-color;
+  background-color: $primary-color;
+}
+
+.mat-nested-tree-node {
+  ul {
+    padding: 0;
+    background-color: $primary-color;
+    color: $primary-text-color;
+  }
+}
+
+.mat-tree-node {
+  align-items: stretch;
+  background-color: $primary-color;
+  color: $primary-text-color;
+
+  .mat-icon {
+    font-size: 20px;
+  }
+
+  &.expand {
+    background-color: $primary-active-color;
+  }
+
+  .mat-button {
+    border-radius: 0px;
+
+    &[disabled="true"] {
+      color: $primary-text-color;
+      background-color: darken($primary-color, 10%);
+      cursor: not-allowed;
+    }
+    padding: 0 5px;
+
+    ul & {
+      padding: 0 40px;
+    }
+  }
+}
+
+.mat-toolbar.mat-primary {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.tree-invisible {
+  display: none;
+}
+
+.tree ul,
+.tree li {
+  margin-top: 0;
+  margin-bottom: 0;
+  list-style-type: none;
+}
+
+.content {
+  display: flex;
+  overflow: overlay;
+  height: calc(100vh - 58px);
+
+  @media screen and (min-width: 778px) {
+    height: calc(100vh - 64px);
+  }
+}
+
+.footer {
+  background-color: $primary-color;
+  color: $primary-text-color;
+}
+
+.mat-toolbar .right-menu {
+  margin-left: auto;
+  display: none;
+
+  .user {
+    background-color: $secondary-color;
+    color: $primary-text-color;
+    box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.65);
+  }
+
+  button {
+    &:not(:last-child) {
+      margin-right: 5px;
+    }
+  }
+
+  @media screen and (min-width: 778px) {
+    display: flex;
+  }
+}

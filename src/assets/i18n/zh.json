@@ -1,0 +1,23 @@
+{
+  "app": {
+    "title": "产品系统",
+    "welcome-login": "欢迎来到登入页面"
+  },
+  "error page": "404 错误",
+  "language": "语言",
+
+  "create-product-form": "建立产品表格",
+  "update-product-form": "更新产品表格",
+
+  "create": "建立",
+  "delete": "删除",
+  "edit": "修改",
+  "update": "更新",
+  "login": "登入",
+  "logout": "登出",
+  "product": {
+    "name": "名字",
+    "type": "类别",
+    "price": "价钱"
+  }
+}

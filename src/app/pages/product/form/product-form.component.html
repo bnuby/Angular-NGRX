@@ -1,0 +1,46 @@
+<div class="create-product-page">
+  <h1>{{ (editMode ? 'update-product-form' : 'create-product-form') | translate }}</h1>
+
+  <form #form="ngForm">
+
+
+    <div class="inputs">
+      <p>
+        <mat-form-field class="example-full-width">
+          <mat-label>{{ 'product.name' | translate }}</mat-label>
+          <input matInput [(ngModel)]="product.name" name="name" placeholder="Ex. admin" minlength="1" required>
+        </mat-form-field>
+      </p>
+
+      <p>
+        <mat-form-field class="example-full-width">
+          <mat-label>{{ 'product.type' | translate }}</mat-label>
+          <input matInput [(ngModel)]="product.type" name="type" placeholder="Ex. wheel" minlength="1" required>
+        </mat-form-field>
+      </p>
+
+      <p>
+        <mat-form-field class="example-full-width">
+          <mat-label>{{ 'product.price' | translate }}</mat-label>
+          <input
+          matInput
+          pattern="\d+(\.\d+)?"
+          [(ngModel)]="product.price" name="price" placeholder="Ex. 0.0">
+        </mat-form-field>
+      </p>
+    </div>
+
+    <div [style]="{
+      display: 'flex',
+      justifyContent: 'space-around'
+    }">
+      <button mat-raised-button color="warn" (click)="reset()">
+        Reset
+      </button>
+      <button mat-raised-button [color]="editMode ? 'accent' : 'primary'" (click)="createOrUpdate(form)">
+        {{ editMode ? 'Update': 'Create '}}
+      </button>
+    </div>
+
+  </form>
+</div>

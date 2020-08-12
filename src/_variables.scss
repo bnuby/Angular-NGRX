@@ -1,0 +1,15 @@
+$primary-color: teal;
+$secondary-color: green;
+$success-color: #1edd14;
+$danger-color: #d30808;
+$warning-color: #d7c111;
+
+$primary-active-color: darken($primary-color, 5%);
+$secondary-active-color: darken($secondary-color, 5%);
+
+$primary-text-color: white;
+
+$loading-color: $primary-color;
+
+$border-color: lightgray;
+

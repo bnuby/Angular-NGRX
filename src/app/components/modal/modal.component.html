@@ -1,0 +1,25 @@
+<div class="modal-overlay" *ngIf="show" #modalOverlay>
+  <div [class]="classes">
+
+    <div class="modal-title">
+      {{ title }}
+    </div>
+
+    <div class="modal-body"
+      [innerHtml]="body"
+    >
+    </div>
+
+    <div class="modal-footer" *ngIf="buttons.length">
+      <button
+        mat-raised-button
+        *ngFor="let button of buttons"
+        [color]="button.color"
+        (click)="button.onClick()"
+        >
+        {{ button.title }}
+      </button>
+    </div>
+
+  </div>
+</div>
